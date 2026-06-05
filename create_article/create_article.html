@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    create_article.html
+    Purpose: UI for writing and publishing a new article. Static page that saves drafts to localStorage.
+    Notes: Inputs include title, category, featured image, body, and author profile fields.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriBlog write and edit page for drafting new stories.">
+    <title>Write / Edit Post - AfriBlog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="../index.html" aria-label="AfriBlog home">AfriBlog</a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="../../category/category.html">View Blogs</a>
+
+            </nav>
+            <section class="header-actions" aria-label="Editor actions">
+                <button class="icon-button" type="button" aria-label="Toggle color theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.7A8.5 8.5 0 1 1 11.3 3a7 7 0 0 0 9.7 9.7Z"></path>
+                    </svg>
+                </button>
+                <button class="icon-button" type="button" aria-label="Open profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3.4"></circle>
+                        <path d="M4.5 19c1.7-3.4 4.3-5 7.5-5s5.8 1.6 7.5 5"></path>
+                    </svg>
+                </button>
+                <button class="publish-button" type="button" onclick="saveDraft()">Publish</button>
+            </section>
+        </div>
+    </header>
+
+    <!-- Main editor area: the form below captures article metadata, content, and author info. -->
+
+    <main class="editor-shell" aria-label="Write article">
+        <span id="draft-status"></span>
+        <form action="">
+
+            <header class="editor-meta">
+                <section class="category-picker">
+                    <label for="article-category">Category</label>
+                    <select id="article-category" name="article-category">
+                        <option value="" selected>Select a Category...</option>
+                        <option value="culture">Culture</option>
+                        <option value="literature">Literature</option>
+                        <option value="art">Art</option>
+                        <option value="history">History</option>
+                    </select>
+                </section>
+            </header>
+
+            <article class="writing-canvas">
+                <!-- Title input: accessible label is visually hidden but present for screen readers -->
+                <h1>
+                    <label class="sr-only" for="article-title">Article title</label>
+                    <input id="article-title" type="text" placeholder="Title..." aria-label="Article title">
+                </h1>
+
+                <div type="button" class="" aria-label="Add featured image">
+                    <!-- Featured image input: hidden file input + preview image element that is unhidden after upload -->
+                    <input id="featured-image" class="image-dropzone" type="file" accept="image/*" hidden>
+                    <img id="featured-preview" alt="Featured image preview" hidden>
+                </div>
+
+                <div>
+                    <textarea name="description" id="article-description"
+                        placeholder="Article description..."></textarea>
+                </div>
+
+                <section class="editor-body" aria-label="Story editor">
+                    <!-- Primary story body textarea. Saved to localStorage when publishing. -->
+
+                    <label class="sr-only" for="story-body">Story body</label>
+                    <textarea id="story-body" name="story-body" placeholder="Begin your story..."></textarea>
+                </section>
+            </article>
+            <hr>
+
+            <section>
+                <!-- Author profile inputs: used to attach author metadata to saved drafts -->
+                <h2>Author Profile</h2>
+                <p>
+                    This is a preview of how your profile will appear to readers. Make sure to keep your bio concise and
+                    engaging, and to upload a clear profile picture that represents you well.
+                </p>
+                <button class="author-profile-preview">
+                    <input id="author-image" class="image-dropzone" type="file" accept="image/*" hidden>
+                    <img id="profile-preview" alt="Profile image preview" hidden>
+                </button>
+                <div class="author-data">
+
+                    <label class="sr-only" for="author-bio">Author bio</label>
+                    <textarea id="author-bio" name="author-bio"
+                        placeholder="Write a brief bio that will appear on your profile and under your articles."></textarea>
+                    <input type="text" name="author-name" id="author-name" placeholder="Author name..."
+                        aria-label="Author name">
+                </div>
+            </section>
+        </form>
+
+    </main>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="../index.html">Home</a>
+        <a href="../category/category.html">Categories</a>
+        <a class="is-active" href="#">Write</a>
+        <a href="#profile">Profile</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

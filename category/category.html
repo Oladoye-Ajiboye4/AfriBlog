@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriBlog Literature category page with curated articles and editorial picks.">
+    <title>AfriBlog - Literature</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="../index.html" aria-label="AfriBlog home">AfriBlog</a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="#" id="cultureCategory" onclick="loadCategory('Culture')">Culture</a>
+                <a href="#" id="literatureCategory" onclick="loadCategory('Literature')">Literature</a>
+                <a href="#" id="artCategory" onclick="loadCategory('Art')">Art</a>
+                <a href="#" id="historyCategory" onclick="loadCategory('History')">History</a>
+            </nav>
+
+            <section class="header-actions" aria-label="Utility actions">
+                <button class="icon-button" type="button" aria-label="Toggle color theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.7A8.5 8.5 0 1 1 11.3 3a7 7 0 0 0 9.7 9.7Z"></path>
+                    </svg>
+                </button>
+                <button class="icon-button" type="button" aria-label="Open profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3.4"></circle>
+                        <path d="M4.5 19c1.7-3.4 4.3-5 7.5-5s5.8 1.6 7.5 5"></path>
+                    </svg>
+                </button>
+            </section>
+        </div>
+    </header>
+
+    <main id="literature" class="shell category-page">
+        <section class="userBlogs" id="userBlogs">
+            <div class="category-intro">User Blog</div>
+            <div id="empty-blog">No user blogs available.</div>
+            
+        </section>
+
+
+        <header class="category-hero">
+            <h1>Literature</h1>
+            <p>
+                Exploring the profound depth and rhythmic prose of African storytellers. From ancient oral traditions to
+                contemporary novels shaping the modern narrative landscape.
+            </p>
+        </header>
+
+        <nav class="topic-filter" aria-label="Literature sub-categories">
+            <a href="#all">All</a>
+            <a class="is-active" href="#fiction">Fiction</a>
+            <a href="#poetry">Poetry</a>
+            <a href="#essays">Essays</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+
+        <section class="article-grid" aria-labelledby="category-heading">
+            <h2 id="category-heading" class="sr-only">Literature articles</h2>
+
+            <article class="category-card" id="fiction">
+                <figure class="card-media">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp49U45_sfKq5-_bHrF0IoMiLYFje5QVwnea3Na-EpZqUTlFH9x4oYF7fRxn3wXHl1Ig0UtJBlTQ2VWYnRgJ4RhbJP-UqxvKrJZgEcIEZsvBYn7ZZ80ehfFcPrMSVeLwrKA0Nmz98aIO8XFj1kV_UeBk-6UYVikg_1g6XbPtJm_5qs7hduv4LsH7246dddpsv3J7T0TweH4ie3AAAflFeffAmed9eyJtKcKadt6rShKU65QoQYs5tYByTWyxIvLlg9o2Xj_pP3UGM"
+                        alt="Vintage typewriter on a wooden desk under warm light.">
+                </figure>
+
+                <p class="card-topic">Fiction</p>
+                <h3>The Echoes of the Harmattan</h3>
+                <p class="card-summary">
+                    A compelling new novel that weaves the harsh realities of the seasonal winds with a delicate family
+                    drama set in 1970s Kano.
+                </p>
+
+                <footer class="card-meta">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoQ5ovFradtvH2tgHxKIzA7CxE1RwV-4ymx4nmFRu1H2L-DK8sxSb_Kzf6A0tczHCpWiZ7zh5xQnaVFoiFhZkNC_-XZuHTlk3rp2jQuOLOIgM4XKRK1SikTALnpDhyO5sO5fUEWxcjPlgBx4Ib_euNPFMwXu2QnxCvBrzPYnsYJi5TdLakYw5Jo-yuHhZG_dwcSblNYMJIIpPlJwpEDEgm9K3z-LRDPt4ruxY_s5ncl7Vm6k2VK6MlYG4NPfWYZUs8Uj30TGmpP4w"
+                        alt="Author portrait for Amara Okafor">
+                    <p>By Amara Okafor</p>
+                </footer>
+            </article>
+
+            <article class="category-card" id="poetry">
+                <figure class="card-media">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM81W8phF1_jeHUdKjFG-AoNdf_FzU7dwF9i8vrBH5DSlmIeq8P1eqqISZ9369brso1Bbyj-P2xzI4mRldr5h-59b_Hs1Wha59C6hC4hQbdttnPf6WtIZr0wd5cJPX0bMcTHo70WMvr2-M5UfULQArLCkoundi9rFhDAb5iFLqy7uKmJXO5fPfzuq2df_LvnIU7GyqA6aASewd_rhsXivuts2EmqCW7QEzap4vNCWM1qNy4j19CAAZRWnKaGk_ggGgf2tFXhXdNFk"
+                        alt="Stacked old books on a minimalist table.">
+                </figure>
+
+                <p class="card-topic">Poetry</p>
+                <h3>Verses from the Sahel</h3>
+                <p class="card-summary">
+                    An exploration of a new anthology that brings together voices from across the Sahel region,
+                    capturing the stark beauty and resilience of the landscape.
+                </p>
+
+                <footer class="card-meta">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNyyXs1yCZbs4_-F5VyeEvNv8MY9P5LJTLTSj_phkn9tv2Nb_PnLab7bc3A-Om6eXmB3E1MQ7YlnJsJoZSBoDWL_zOjQ8mgHqlp56c4BK0HzTegWxIz4X6ErHuNh3PPIGT4FYdYb1dVzHIX69wv1NktirRLGCB0-wIwHVSvJT8nogBVOBxRb9si0UdlICC-LJw9K3bxvfM-WCRi7yblPEwyYgUihWlm8GNEmpRWnyjBQ8yUuTVmVwQ13VxFOQb5EYekBxSY55OMk"
+                        alt="Author portrait for Ibrahim Sall">
+                    <p>By Ibrahim Sall</p>
+                </footer>
+            </article>
+
+            <article class="category-card" id="essays">
+                <figure class="card-media">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuZfHSbXu_pOcbmbKWMWaV5aIFrYvTrBYT7OifFsm8IOpvLOaYWJ5KjtLdWk2A0lmw-o290rE-6UC-LIGc3tNzvqS_WjzWCEWHW4Ikz3oEzlPTq5DOJ2FqwCaWX8dD-84EsypIjwnq4XWuT9Xv2xt2F7Qyx-Houy54Iogf4s7OXZ-x1D--KUFrEnisGU56LWdNTvIh8lUpy3oaaCldEhiL2WgvheR5vYLRw_WKoVubGSKpZdjogpxwdvxZgKS68iBPWwN7lVReORg"
+                        alt="Open book with glasses in dramatic light.">
+                </figure>
+
+                <p class="card-topic">Essays</p>
+                <h3>Decolonizing the Bookshelf</h3>
+                <p class="card-summary">
+                    A critical essay on the necessity of re-evaluating literary canons and the ongoing effort to center
+                    African authors in global literary studies.
+                </p>
+
+                <footer class="card-meta">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3p7tqvRzEHatg8rmyBZrzIhKSvKEYlNl7gjLzOEBccSBejICcjF24EOTCPPZlysBNRPeZlBC2xyL8FsjO7vn3To4zpXoaCtuq3io-myXUlExLsg0YX6bqcpbA6IpwwRJAgKzN6Vmas3yvtryUNAEI0agzl39vBzChZEsE0oPRS7uAhWlwq8tL87fgT1gjlP_g04AzIXsyhgLzAJ51X6olKbx2l9DLbwZnv8y9TP_00PgAPSZjmv1J2yits3v7fPlWbG1e8dvJAlw"
+                        alt="Author portrait for Chiamaka Ndubuisi">
+                    <p>By Chiamaka Ndubuisi</p>
+                </footer>
+            </article>
+        </section>
+
+    
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <a href="../index.html">Home</a>
+            <a class="is-active" href="#literature">Categories</a>
+            <a href="#write">Write</a>
+            <a href="#profile">Profile</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <section class="footer-brand">
+                <h2>AfriBlog</h2>
+                <p>© <span id="current-year"></span> AfriBlog. Celebrating Modern Heritage.</p>
+            </section>
+
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="#about">About Us</a>
+                <a href="#guidelines">Editorial Guidelines</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

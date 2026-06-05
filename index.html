@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriBlog celebrates modern heritage through literature, art, and culture.">
+    <title>AfriBlog - Celebrating Modern Heritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="homepage/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="#home" aria-label="AfriBlog home">AfriBlog</a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="../create_article/create_article.html">Create Blog</a>
+                <a href="../category/category.html">View Blogs</a>
+
+            </nav>
+
+            <div class="header-actions" aria-label="Utility actions">
+                <button class="icon-button" type="button" aria-label="Toggle color theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.7A8.5 8.5 0 1 1 11.3 3a7 7 0 0 0 9.7 9.7Z"></path>
+                    </svg>
+                </button>
+                <button class="icon-button" type="button" aria-label="Open profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3.4"></circle>
+                        <path d="M4.5 19c1.7-3.4 4.3-5 7.5-5s5.8 1.6 7.5 5"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="shell hero-section" aria-labelledby="featured-article-title">
+            <article class="hero-card">
+                <figure class="hero-media">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKkJ7UMHTykVF2jRA7oqu90A2yF8JlVBKCexLJDGXPvY4LjK3jqIccvl2d6BnQ_bM03kildu9I7ajtZvuWZvzZCE6q3nvqE4tB5dW_fyIEUw3dUGkZxRDcIEPWR7lGsGh-a07vmEms7gzxS7IqxoSK7aTVt6AN7YnPMfLPNgTWdL8rmLDbfC33Xn5UEw00PUGpDe1kIJSRAHtvczmzZI8y0vXElkeXHPQUNpn2e2iaZJ_kkJR3_IlRLAvJ3nucme80Y3YSP_PlM-M"
+                        alt="A digital installation with glowing red geometric forms in a minimalist gallery room.">
+                </figure>
+
+                <aside class="hero-panel">
+                    <p class="eyebrow">Art</p>
+                    <h1 id="featured-article-title">The Vanguard of Modern African Sculpture</h1>
+                    <p class="hero-summary">
+                        Exploring the intersection of traditional mediums and contemporary digital spaces in the latest
+                        exhibition in Dakar.
+                    </p>
+
+                    <div class="hero-meta">
+                        <div class="author-block">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfotxeRlRHLhsLG2ZMcEXLCUZvOYxkgGKu9GIrUDd3JdlJofPfQUpTObReH_0MiVBg_x9_UEb3KR-XbZsFVC3Vs8O7RtXVT4CO53vod4ppE_eLP_1u3WJBtvP-vP21_fD-NJri2eZLb8JuIY7bPdNe6GTOdAYExFSi5yn3YnArzn3TnIgiO2ll8eve1JrGn7NNqiy8_tZ05VhAmgRLx7Q7C-POJYEyprtEDhqAhHkF3msZJ5EEtdFZRIoumr3kNM_7SwYXETWWo5w"
+                                alt="Portrait of the author Amara Diop">
+                            <div>
+                                <p class="author-name">By Amara Diop</p>
+                                <p class="author-date">Oct 12, 2024</p>
+                            </div>
+                        </div>
+
+                        <p class="read-time">8 min read</p>
+                    </div>
+                </aside>
+            </article>
+        </section>
+
+        <section class="shell category-strip" aria-label="Article categories">
+            <a class="category-chip is-active" href="#all">All</a>
+            <a class="category-chip" href="#contemporary-art">Contemporary Art</a>
+            <a class="category-chip" href="#digital-humanities">Digital Humanities</a>
+            <a class="category-chip" href="#literary-criticism">Literary Criticism</a>
+            <a class="category-chip" href="#urban-architecture">Urban Architecture</a>
+        </section>
+
+        <section class="shell magazine-grid" aria-labelledby="latest-stories-heading">
+            <h2 class="section-title" id="latest-stories-heading">Latest stories</h2>
+
+            <div class="story-grid">
+                <article class="story-card story-card-featured" id="urban-architecture">
+                    <span class="featured-ribbon">Featured</span>
+
+                    <figure class="story-media story-media-tall">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8rqtFmys_nRcQ54XZn2I3cI2lZ8QSHqdfNn9gS6emm5m9s0RZwq8bBywFIj5tjle_BOsRXQVD6MNTFrWbQiw0Wi5xYkGSaxvifrReMj85OdL2cLlBVnw4GPRPfODUx74ZP8-kmLPctsaeH-mCjaOHgug3CZ_hMqOFgm6KJqO6iDup1uymh3kxawh77eItKBG_IMeN2ucarO3_cR8-deJEof4Iox0yR55OYnNlGXQ90OhxjmDJSvH9W6WglJfXtF3yxoptC6iByxo"
+                            alt="Warm geometric architectural forms lit by sunlight.">
+                    </figure>
+
+                    <div class="story-body">
+                        <p class="story-tag story-tag-forest">Architecture</p>
+                        <h3>The New Vernacular: Building the Future</h3>
+                        <p class="story-excerpt">How indigenous materials are reshaping contemporary structural design
+                            across the continent, blending sustainability with striking modernist forms.</p>
+
+                        <footer class="story-footnote">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1d7-zYZCH_jBIbkO8t_1uzR-YRFkv9gxWuzFpFt7e2ey8raOv_zroHPEDZ8q60wX4USbUZq7WB7r483s29dg8BbcLbZccxYltzXLolJRjqgjGSHqwBTrFhVYJa6FYE8Eki7wAIm1KP3AYsQuOnmQstxKJg4xAMmMLR750KTVXlIoaowNvSqx1Re5LTpaMUj11AkPnHhPskvsA-ySxxZYmk8wrCohoP6h9UBmQebAI-2MaS_qHJbVhUH8ucT6PmHlzYWgaz37YovA"
+                                alt="Author portrait for Kwame Osei">
+                            <p>By Kwame Osei · Oct 10</p>
+                        </footer>
+                    </div>
+                </article>
+
+                <article class="story-card story-card-wide" id="culture">
+                    <figure class="story-media story-media-square">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB99mAxVyudY_2E1gSUq8YabKBoIslbNhwCvWq679RWNVrSCBPz7zlpB_jw9cWXLLwcY8zzoaqVufTNPB5dkUfvduwa7wKdXniC0mpOCURaIGd8MzAvt5_uBL1iR9rZlYWS3r0ZM7iY_nIRcHLZcnhUhtDRCGg7JCqrBCmjzLu579infNmFeEiA4iYbEZFRwftopGCjvBjfH82Smvw2TkMR_1IlZanfS74IoN2VlsVIfdbX0sUnYUgFKEthQRKGtWjXhkgQaDUALsI"
+                            alt="A woven basket on a pale surface in soft light.">
+                    </figure>
+
+                    <div class="story-body">
+                        <p class="story-tag story-tag-green">Culture</p>
+                        <h3>Weaving Narratives: The Silent Language</h3>
+                        <p class="story-excerpt">Understanding the complex symbolism embedded in everyday domestic
+                            artifacts.</p>
+
+                        <footer class="story-footnote simple-footnote">
+                            <p>By Nneka Okafor · Oct 08</p>
+                        </footer>
+                    </div>
+                </article>
+
+                <article class="story-card" id="literature">
+                    <figure class="story-media story-media-portrait story-media-mono">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxuUmyb76gL5Ggz7BM3Oa9GzuDVGtkvvYrf-93qC8Pah7rywBisM22HvZ79oXTM3Wq0VpsQ2WmnCO1GfRAp0HTwvnerFJ6jtMBasKbVHZUsVStDwUAtQs0AxuoAZkMUH7S0jj6iFeUbinqj4zzMwpnd6fYJZ1G3Ux8JPMXxcHdAUr1QthxRTO-uIAiuj-5TyTg1GOIh6pOwNa-hooGsm4X6RYBayO7eaZ-BfTUsRLruE_4iuAXyREy7hBFwJ4k2qsglCjfvm8ghQQ"
+                            alt="An open book under dramatic light.">
+                    </figure>
+
+                    <div class="story-body">
+                        <p class="story-tag story-tag-forest">Literature</p>
+                        <h3>The Resurgence of the Oral Tradition in Print</h3>
+                        <p class="story-excerpt">Modern authors are finding innovative ways to translate the cadence of
+                            spoken word into the constraints of the page.</p>
+
+                        <footer class="story-footnote simple-footnote">
+                            <p>By Tariq Mansour · Oct 05</p>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <section class="footer-brand">
+                <h2>AfriBlog</h2>
+                <p>Celebrating modern heritage through literature, art, and culture.</p>
+                <small>© <span id="current-year"></span> AfriBlog. Celebrating Modern Heritage.</small>
+            </section>
+
+            <aside class="footer-links" aria-label="Footer links">
+                <a href="#about">About Us</a>
+                <a href="#guidelines">Editorial Guidelines</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </aside>
+        </div>
+    </footer>
+
+    <script src="homepage/script.js"></script>
+</body>
+
+</html>

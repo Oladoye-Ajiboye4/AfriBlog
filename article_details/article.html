@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+    article.html
+    Purpose: Static article detail template. Loads article data (title, image, content) from localStorage.
+    Notes: The corresponding script injects dynamic content and updates the footer year.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AfriBlog article detail page for literature and editorial reading.">
+    <title>AfriBlog - Article Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="shell header-bar">
+            <a class="brand" href="../index.html" aria-label="AfriBlog home">AfriBlog</a>
+
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="../create_article/create_article.html">Create Blog</a>
+                <a href="../category/category.html">View Blogs</a>
+
+            </nav>
+
+            <div class="header-actions" aria-label="Utility actions">
+                <button class="icon-button" type="button" aria-label="Toggle color theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.7A8.5 8.5 0 1 1 11.3 3a7 7 0 0 0 9.7 9.7Z"></path>
+                    </svg>
+                </button>
+                <button class="icon-button" type="button" aria-label="Open profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3.4"></circle>
+                        <path d="M4.5 19c1.7-3.4 4.3-5 7.5-5s5.8 1.6 7.5 5"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="reading-progress-bar" aria-hidden="true">
+        <div class="reading-progress"></div>
+    </div>
+
+    <main id="article" class="shell article-layout">
+        <header class="article-hero">
+            <!-- Article hero: contains metadata (category, title, summary), author info and hero image -->
+            <div class="article-intro">
+                <p class="eyebrow" id="category">Literature</p>
+                <h1 id="article-title">The Echoes of Oral Tradition in Modern African Fiction</h1>
+                <p class="article-summary" id="description">
+                    Exploring how contemporary writers are weaving the intricate rhythms of ancestral storytelling into
+                    the fabric of the modern novel, creating a unique synthesis of past and present.
+                </p>
+
+                <div class="article-meta">
+                    <figure class="author-meta">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhidIixQ31iz_cW6ztZbDhLps7Sm4wB9_n31ZK2uia3PGfKk4KOYq2MEXEDdpewcMCtXQGh84bzBUbC0lMTJQKM-yQ0hUbyUtnruqoe4FMUF02CpR29b4WMotgMn-avxLA8unt6CDXKX6dtzK56z6royWiZ9GzXVmFl3rfTnCyTxXQDA3Of3mA1jhgC77_38U4VG7Au8hIcShjyp82-1on0ggfwi_lx_iUV0SQPNOAe8BawwNEOZg54wglTI7HU_dKWJaU1LTiq0o"
+                            alt="Portrait of Amara Okafor" id="profile-image">
+                        <figcaption>
+                            <p class="author-name" id="author-name">By Amara Okafor</p>
+                            <p class="author-date">Published Oct 24, 2023 · 8 min read</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <figure class="hero-figure">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRNavmA4oanvu1f-30wj5HAkW2XG3GDz7sX2qgLuTiNsVmhaFu2XfmIExVsV6Vg65kdfZC7ALyuUkTbnYacX6SbusWB3rg41d4UDdA12mEAarrvdj2vane0PQsWCBVtAyUB0Be7AqzEvUv_B7lH74lXWTbo15LpLjr5x3MGyC4Tv-nOBn8Z2m9ry2PTdINnu5R_xsquxyvQCwzh5OLMyPLOrcHqhA68tuJqSt6E0i6NsF3BpAGmenIh7V7sOpClYZi5bpauFHF_Z0"
+                    alt="Glowing geometric installation inside a dark gallery room." id="article-image">
+            </figure>
+        </header>
+
+        <section class="reading-grid" aria-label="Article content">
+            <!-- Main reading grid: article body, share rail, and comments section -->
+            <aside class="share-rail" aria-label="Share piece">
+                <p class="rail-title">Share Piece</p>
+
+                <ul class="share-list">
+                    <li>
+                        <a href="#twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18 7.5c.01.2.01.4.01.6 0 6.2-4.7 13.3-13.3 13.3-2.7 0-5.2-.8-7.4-2.3.4.1.9.1 1.3.1 2.3 0 4.4-.8 6-2.1-2.1 0-3.9-1.4-4.5-3.3.3.1.6.1.9.1.4 0 .8-.1 1.2-.2-2.2-.5-3.9-2.4-3.9-4.7v-.1c.7.4 1.5.6 2.3.7-1.3-.9-2.1-2.4-2.1-4 .7.4 1.6.8 2.5.8-1.5-1-2.2-2.7-2.2-4.3 0-.9.2-1.7.6-2.4 2.4 3 6 4.9 10 5.1-.1-.4-.1-.8-.1-1.2 0-2.8 2.3-5 5-5 1.4 0 2.7.6 3.7 1.5.9-.2 1.8-.5 2.7-1-.3 1-1 1.8-1.9 2.3.9-.1 1.7-.3 2.5-.7-.6.9-1.4 1.6-2.3 2.2Z">
+                                </path>
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#copy-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9.5 15.5 7 18a4 4 0 0 1-5.7-5.7l3-3a4 4 0 0 1 5.6 0"></path>
+                                <path d="M14.5 8.5 17 6a4 4 0 0 1 5.7 5.7l-3 3a4 4 0 0 1-5.6 0"></path>
+                                <path d="M8 12h8"></path>
+                            </svg>
+                            <span>Copy Link</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#save">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 4h12v16l-6-3-6 3V4Z"></path>
+                            </svg>
+                            <span>Save</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <article class="article-body">
+                <section class="content-block" id="article-content">
+                    <p class="drop-cap">
+                        The transition from the spoken word to the printed page is often viewed as a loss, a dilution of
+                        the visceral energy that accompanies a live storytelling session beneath a starlit sky. However,
+                        a new generation of writers is challenging this narrative, proving that the page can be just as
+                        resonant as the voice.
+                    </p>
+                    <p>
+                        In novels that span continents and generations, we see the structural markers of oral tradition,
+                        repetition, call-and-response dynamics, and digressive anecdotes that serve as moral anchors.
+                        These elements are not merely stylistic flourishes; they are foundational architecture.
+                    </p>
+
+                    <figure class="inline-figure">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnPefPRblZWwyjsUUPMvy5lCWNeFooFhhZpxbq-P_MaibzuII5_xiiLcwZwV_pyJqg9ea1wGtr0zU6qf50LCWfKSj1mnfzrAFj5g7rhY291RwH6RqZ_qsI65c_pbSj3wikxR-2rO2SGBVlaQnhCwi_Iws90RX0mTSnZRPrgPH1W3PqV9BfF0h9c-yq-I8cMCPcBciDsZKr-3iB4urm1ec0GD0RE0hiaHOwuAu-9BTBQo6T8QZSbsaUnrqxQ2yEKwCpMuVxtIGNus4"
+                            alt="A dark sculptural book-like installation in a gallery space.">
+                        <figcaption>The tactile relationship with literature remains central to the modern experience.
+                        </figcaption>
+                    </figure>
+
+                    <h2>The Rhythm of the Griot</h2>
+                    <p id>
+                        Consider the role of the Griot, the traditional West African historian, storyteller, praise
+                        singer, and poet. The Griot's narrative is non-linear. It circles the subject, providing context
+                        upon context before delivering the core message. We see this mirrored in contemporary works
+                        where protagonists often speak in spirals, tracing their lineage back to mythical founders
+                        before addressing their present predicament.
+                    </p>
+
+                    <blockquote>
+                        “The story is never just about what happened yesterday; it is about what happened a century ago
+                        that made yesterday inevitable.”
+                    </blockquote>
+
+                    <p>
+                        This approach demands a different kind of reader engagement, one that is patient, willing to be
+                        led down seemingly disparate paths that eventually converge in a powerful crescendo of
+                        understanding.
+                    </p>
+                </section>
+
+                <section class="comments-section" aria-labelledby="conversation-heading">
+                    <h2 id="conversation-heading">Join the Conversation</h2>
+
+                    <form class="comment-form">
+                        <label class="sr-only" for="commentText">Share your thoughts</label>
+                        <textarea id="commentText" name="comment" rows="4"
+                            placeholder="Share your thoughts..."></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+
+                    <section class="comment-list" aria-label="Existing comments">
+                        <article class="comment-card">
+                            <span class="comment-avatar" aria-hidden="true">JD</span>
+                            <div class="comment-copy">
+                                <header>
+                                    <p class="comment-name">Julianne Doe</p>
+                                    <p class="comment-time">2 days ago</p>
+                                </header>
+                                <p>
+                                    The observation about non-linear narrative structures mirroring the Griot tradition
+                                    is fascinating. It completely reframes how we should approach reading these texts.
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+            </article>
+        </section>
+
+        <aside class="mobile-nav" aria-label="Mobile navigation">
+            <a href="../index.html">
+                <span>Home</span>
+            </a>
+            <a class="is-active" href="#article">
+                <span>Categories</span>
+            </a>
+            <a href="#write">
+                <span>Write</span>
+            </a>
+            <a href="#profile">
+                <span>Profile</span>
+            </a>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <section class="footer-brand">
+                <h2>AfriBlog</h2>
+                <p>© <span id="current-year"></span> AfriBlog. Celebrating Modern Heritage.</p>
+            </section>
+
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="#about">About Us</a>
+                <a href="#guidelines">Editorial Guidelines</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
