@@ -36,7 +36,7 @@ Each folder contains a standalone HTML file and accompanying scripts/styles. The
 
 Paste your presentation or demo video link below:
 
-Presentation video: <INSERT YOUR VIDEO LINK HERE>
+Presentation video: [<INSERT YOUR VIDEO LINK HERE>](https://drive.google.com/file/d/1ea0px_1y2MGVDdwH2NmpVkYcoJh0IAei/view?usp=drive_link)
 
 ---
 
