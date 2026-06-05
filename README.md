@@ -15,8 +15,6 @@ AfriBlog is a simple static blog prototype focused on publishing and browsing ar
 
 ```bash
 cd afriBlog
-python3 -m http.server 8000
-# then open http://localhost:8000 in your browser
 ```
 
 3. Navigate the site using the links on the pages. No additional configuration is required.
@@ -34,10 +32,7 @@ Each folder contains a standalone HTML file and accompanying scripts/styles. The
 
 ## Presentation / Demo video
 
-Paste your presentation or demo video link below:
 
-Presentation video: [<INSERT YOUR VIDEO LINK HERE>](https://drive.google.com/file/d/1ea0px_1y2MGVDdwH2NmpVkYcoJh0IAei/view?usp=drive_link)
+Presentation video: 
+https://drive.google.com/file/d/1ea0px_1y2MGVDdwH2NmpVkYcoJh0IAei/view?usp=drive_link
 
----
-
-If you'd like, I can also add a CONTRIBUTING or LICENSE file, or wire up a small static server configuration for deployment (GitHub Pages instructions). Let me know which you'd prefer.
